@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import airbnb from "../Assets/Airbnb.svg"
 import booking from "../Assets/Booking.svg"
 import plumguide from "../Assets/Plum\ Guide.svg"
@@ -19,14 +20,17 @@ class MainTextLand extends React.Component{
                     <li>Leave reviews and experiences.</li>
                     <li>See locations for all camps.</li>
                 </ul>
-                <button>
+                {/* <button className="btn">
                     View Campgrounds
-                </button>
+                </button> */}
+                <div className="btn">
+                    <Link to='/searchCamp'>View Campgrounds</Link>
+                </div>
                 <p>Partnered with:</p>
-                <div>
-                    <img scr={airbnb} alt=""/>
-                    <img scr={booking} alt=""/>
-                    <img scr={plumguide} alt=""/>
+                <div className="logos">
+                    <img src={airbnb} alt=""/>
+                    <img src={booking} alt=""/>
+                    <img src={plumguide} alt=""/>
                 </div>
             </main>
         )
