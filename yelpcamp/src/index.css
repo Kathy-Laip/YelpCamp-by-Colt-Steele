@@ -20,6 +20,10 @@ h1{
   font-weight: bold;
 }
 
+h2{
+  font-size: 3rem;
+}
+
 p, li{
   color: gray;
   margin: 1rem 0;
@@ -39,13 +43,9 @@ ul{
   font-size: 1.5rem;
   font-weight: 300;
 
-  margin: 2rem 0;
-  padding: 1.5rem 0.5rem;
-
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   box-sizing: border-box;
-  width: 50%;
 }
 
 a{
@@ -128,5 +128,146 @@ main{
 
 
 .searchPage{
-  padding: 1rem 3rem;
+  padding: 0 5rem;
+  width: 100vw;
+}
+
+.headerSearch{
+  display: flex;
+  justify-content: space-between;
+
+  width:100%;
+  padding: 3rem 0;
+}
+
+.logoSearch{
+  float: left;
+
+  text-align: center;
+}
+
+.logoSearch img{
+  margin: auto;
+}
+
+.home{
+  float: left;
+}
+
+.logIn{
+  float: right;
+}
+
+.home,
+.logIn{
+  margin: 0 2rem;
+}
+
+.home,
+.logIn,
+#createAcc span{
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+#createAcc{
+  float: right;
+  text-align: center;
+  line-height: 100%;
+
+}
+
+#createAcc span{
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  padding: 3% 0.5rem;
+
+  
+}
+
+
+.searchSearch{
+  width: 100%;
+
+  padding: 5rem 3rem;
+
+  background-color: #f5f3f2;
+}
+
+.boxSearch{
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+
+  width: 40%;
+}
+
+.searchLine{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+
+  background-color: #fff;
+
+  padding: 1rem 1rem;
+
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+
+.searchLine img{
+  margin-right: 1rem;
+}
+
+.searchLine input{
+  font-size: 1rem;
+  height: 100%;
+  border: none;
+}
+
+.btnSearch{
+  display: table-cell;
+  vertical-align: middle;
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.btnSearch p{
+  color: #fff;
+
+  position: relative;
+  top:50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.5rem;
+  text-align: center;
+  margin:0 auto;
+}
+
+#linkP{
+  margin: 1rem 0;
+  padding: 0 0;
+
+  color: gray;
+
+  text-decoration-line: underline;
+
+  cursor: pointer;
+}
+
+.campCards{
+  width: 100%;
+
+  margin: 5rem 0;
+}
+
+.card{
+  float: left;
+
+  width: 30%;
+  
 }

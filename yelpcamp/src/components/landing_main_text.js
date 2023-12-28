@@ -23,7 +23,7 @@ class MainTextLand extends React.Component{
                 {/* <button className="btn">
                     View Campgrounds
                 </button> */}
-                <div className="btn">
+                <div className="btn" style={{width: '50%', margin: '2rem 0',padding: '1.5rem 0.5rem'}}>
                     <Link to='/searchCamp'>View Campgrounds</Link>
                 </div>
                 <p>Partnered with:</p>

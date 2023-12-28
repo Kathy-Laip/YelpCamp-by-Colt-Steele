@@ -13,7 +13,7 @@ root.render(
   <>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Landing/>}></Route>
+        <Route index element={<Landing/>} path='/'></Route>
         <Route path='/searchCamp' element={<SearchPage/>}></Route>
       </Routes>
     </BrowserRouter>
