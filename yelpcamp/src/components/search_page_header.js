@@ -6,7 +6,7 @@ export class SearchPageHeader extends Component {
   render() {
     return (
       <div className='headerSearch'>
-        <div>
+        <div className='first'>
           <div className="logoSearch">
             <img src={logo} alt=""/>
           </div>
@@ -15,8 +15,8 @@ export class SearchPageHeader extends Component {
           </div>
         </div>
         <div>
-          <div className='btn' style={{width: '20vw', height: '8vh'}} id='createAcc'>
-            <Link to=''><span>Create an account</span></Link>
+          <div className='btn' style={{width: '20vw', height: '100%'}} id='createAcc'>
+            <Link to=''><p style={{ color: 'white', fontSize: '1.5rem'}}>Create an account</p></Link>
           </div>
           <div className='logIn'>
             <Link to=''><p>Login</p></Link>
