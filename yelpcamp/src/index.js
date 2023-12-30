@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MainTextLand from './components/landing_main_text';
-import Landing from './components/landing_page';
-import HeadLand from './components/landing_page_head';
-import ImgLand from './components/landing_page_img';
-import SearchPage from './components/search_page';
+import Landing from './components/landing/landing_page';
+import SearchPage from './components/search/search_page';
+import SignInPage from './components/signin/signin_page';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './index.css';
 
@@ -15,6 +13,7 @@ root.render(
       <Routes>
         <Route index element={<Landing/>} path='/'></Route>
         <Route path='/searchCamp' element={<SearchPage/>}></Route>
+        <Route path='/signin' element={<SignInPage/>}></Route>
       </Routes>
     </BrowserRouter>
   </>

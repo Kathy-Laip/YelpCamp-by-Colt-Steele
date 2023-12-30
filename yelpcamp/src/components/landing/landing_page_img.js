@@ -1,5 +1,5 @@
 import React from "react";
-import peopleImg from "../Assets/Hero\ Image.jpg"
+import peopleImg from "../../Assets/Hero\ Image.jpg"
 
 class ImgLand extends React.Component{
     constructor(options){

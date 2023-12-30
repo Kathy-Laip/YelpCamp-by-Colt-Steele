@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from "../Assets/Logo.svg"
+import logo from "../../Assets/Logo.svg"
 
 export class SearchFooter extends Component {
   render() {

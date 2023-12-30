@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import airbnb from "../Assets/Airbnb.svg"
-import booking from "../Assets/Booking.svg"
-import plumguide from "../Assets/Plum\ Guide.svg"
+import airbnb from "../../Assets/Airbnb.svg"
+import booking from "../../Assets/Booking.svg"
+import plumguide from "../../Assets/Plum\ Guide.svg"
 
 class MainTextLand extends React.Component{
     constructor(options){

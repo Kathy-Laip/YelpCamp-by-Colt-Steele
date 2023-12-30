@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import mountCamp from '../Assets/Camp Images/Compressed Images/Mount\ Ulap.jpg'
-import calaguasCamp from '../Assets/Camp Images/Compressed Images/Calaguas\ Island.jpg'
-import onayCamp from '../Assets/Camp Images/Compressed Images/Onay\ Beach.jpg'
-import sevenSisterCamp from '../Assets/Camp Images/Compressed Images/Seven\ Sisters\ Waterfall.jpg'
-import latikCamp from '../Assets/Camp Images/Compressed Images/Latik\ Riverside.jpg'
-import buloyCamp from '../Assets/Camp Images/Compressed Images/Buloy\ Springs.jpg'
+import mountCamp from '../../Assets/Camp Images/Compressed Images/Mount\ Ulap.jpg'
+import calaguasCamp from '../../Assets/Camp Images/Compressed Images/Calaguas\ Island.jpg'
+import onayCamp from '../../Assets/Camp Images/Compressed Images/Onay\ Beach.jpg'
+import sevenSisterCamp from '../../Assets/Camp Images/Compressed Images/Seven\ Sisters\ Waterfall.jpg'
+import latikCamp from '../../Assets/Camp Images/Compressed Images/Latik\ Riverside.jpg'
+import buloyCamp from '../../Assets/Camp Images/Compressed Images/Buloy\ Springs.jpg'
 
 export class SearchCards extends Component {
   render() {

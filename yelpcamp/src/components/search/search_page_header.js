@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import logo from "../Assets/Logo.svg"
+import logo from "../../Assets/Logo.svg"
 
 export class SearchPageHeader extends Component {
   render() {
@@ -19,7 +19,7 @@ export class SearchPageHeader extends Component {
             <Link to=''><p style={{ color: 'white', fontSize: '1.5rem'}}>Create an account</p></Link>
           </div>
           <div className='logIn'>
-            <Link to=''><p>Login</p></Link>
+            <Link to='/signin'><p>Login</p></Link>
           </div>
         </div>
       </div>

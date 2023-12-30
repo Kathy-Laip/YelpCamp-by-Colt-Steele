@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/Logo.svg"
+import logo from "../../Assets/Logo.svg"
 
 class HeadLand extends React.Component{
     constructor(options){
