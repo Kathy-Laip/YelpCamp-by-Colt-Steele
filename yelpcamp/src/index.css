@@ -108,7 +108,7 @@ main{
   flex-direction: column;
 }
 
-@media (max-width:1000px){
+@media (max-width:2000px){
   header{
     padding: 3rem 0rem 3rem 5rem;
     float: left;
@@ -311,4 +311,78 @@ main{
   .card{
     width: 100%;
   }
+}
+
+.headerSigin{
+  float: left;
+  width: 65vw;
+
+  padding: 3rem 8rem;
+}
+
+.backSearch{
+  float: right;
+
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.signInLogin{
+  width:65vw;
+  float: left;
+  padding: 8rem 8rem;
+}
+
+.signInLogin input{
+  width: 100%;
+
+  background-color: #f1f1f1;
+  color: gray;
+
+  padding: 1.5rem 1.5rem;
+
+  border-radius: 2px;
+  border: none;
+
+  font-size: 1.5rem;
+}
+
+#logBtn{
+  width: 100%;
+
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+}
+
+#signupLink{
+  text-decoration-line: underline;
+  color: blue;
+
+  font-weight: 700;
+}
+
+.signInWords{
+  float: right;
+  background-color: #FAEEDD;
+  height: 100vh;
+  width: 35vw;
+}
+
+.centerWords{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+
+  width: 60%;
+  height: 30%;
+  
+}
+
+.centerWords p{
+  line-height: 180%;
+}
+
+.user{
+  margin-top: 3rem;
 }
