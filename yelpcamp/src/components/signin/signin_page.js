@@ -8,8 +8,9 @@ export class SignInPage extends Component {
     return (
       <div className='signinbody'>
         <SiginHader/>
-        <SinginWords/>
+        <SinginWords idSiginIn='pkSignIn'/>
         <SignInLogin/>
+        <SinginWords idSignIn='mobileSinIn'/>
       </div>
     )
   }

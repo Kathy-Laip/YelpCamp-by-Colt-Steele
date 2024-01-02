@@ -369,6 +369,10 @@ main{
   width: 35vw;
 }
 
+#mobileSinIn{
+  display: none;
+}
+
 .centerWords{
   margin-left: auto;
   margin-right: auto;
@@ -385,4 +389,33 @@ main{
 
 .user{
   margin-top: 3rem;
+}
+
+.user img{
+  width: 15%;
+  margin-right: 2rem;
+  float: left;
+}
+
+#userInfo{
+  float: left;
+}
+
+#userInfo p{
+  margin: 0.1rem 0;
+}
+
+
+@media(max-width: 1600px){
+  #pkSignIn{
+    display: none;
+  }
+  #mobileSinIn{
+    display: block;
+  }
+  .headerSigin,
+  .signInLogin,
+  .signInWords{
+    width:100%;
+  }
 }
