@@ -172,6 +172,7 @@ main{
 
 .home,
 .logIn,
+.campBtn,
 #createAcc span{
   height: 100%;
   line-height: 100%;
@@ -334,7 +335,8 @@ main{
   padding: 8rem 8rem;
 }
 
-.signInLogin input{
+.signInLogin input,
+.addNewCampPage input{
   width: 100%;
 
   background-color: #f1f1f1;
@@ -418,4 +420,40 @@ main{
   .signInWords{
     width:100%;
   }
+}
+
+.addNewCampPage{
+  padding: 0 5rem;
+  width: 100vw;
+}
+
+.cardOfCamp{
+  width: 50%;
+
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.cardOfCamp #textCard{
+  overflow: scroll;
+  white-space: pre;
+
+  height: 40%;
+}
+
+.cardOfCamp ::placeholder{
+  color: lightgray;
+}
+
+.campBtn{
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+
+  width: 100%;
+  font-size: 1rem;
+}
+
+.campBtn p{
+  color: #fff;
 }

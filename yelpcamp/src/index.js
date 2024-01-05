@@ -5,6 +5,7 @@ import SearchPage from './components/search/search_page';
 import SignInPage from './components/signin/signin_page';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './index.css';
+import AddNewCamp from './components/add new camp/addNewCamp_page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route index element={<Landing/>} path='/'></Route>
         <Route path='/searchCamp' element={<SearchPage/>}></Route>
         <Route path='/signin' element={<SignInPage/>}></Route>
+        <Route path='/addNewCamp' element={<AddNewCamp/>}></Route>
       </Routes>
     </BrowserRouter>
   </>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import search from '../../Assets/Search\ Icon.svg'
 
 export class SearchSearch extends Component {
@@ -14,7 +15,7 @@ export class SearchSearch extends Component {
                 <input placeholder='Search for camps'></input>
             </div>
             <div className='btn btnSearch'><p>Search</p></div>
-            <div id='linkP'>Or add your own campground</div>
+            <div id='linkP'><Link to='/addNewCamp'>Or add your own campground</Link></div>
         </div>
       </div>
     )
