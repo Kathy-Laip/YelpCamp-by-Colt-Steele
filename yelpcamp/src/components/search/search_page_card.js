@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-export class SearchPage_Card extends Component {
-    constructor(props){
-        super(props)
-    }
+export class SearchPageCard extends Component {
     render() {
       return (
         <div className='card'>
@@ -12,10 +10,11 @@ export class SearchPage_Card extends Component {
             </div>
             <p style={{color: 'black', fontWeight: '700'}}>{this.props.infoCard.p}</p>
             <p>{this.props.infoCard.text}</p>
-            <button className='whiteBtn' style={{width: '100%'}}><p style={{color: 'black', fontWeight: '700'}}>View Campground</p></button>
+            <button className='whiteBtn' style={{width: '100%'}}><Link to='/individualCamp' onClick={() => this.props.setCamp(this.props.infoCard.p)}><p style={{color: 'black', fontWeight: '700'}}>View Campground</p></Link></button>
         </div>
       )
     }
+
 }
 
-export default SearchPage_Card
+export default SearchPageCard

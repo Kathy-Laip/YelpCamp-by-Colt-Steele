@@ -135,7 +135,8 @@ main{
 }
 
 
-.searchPage{
+.searchPage, 
+.mainIndCamp{
   padding: 0 5rem;
   width: 100vw;
 }
@@ -456,4 +457,26 @@ main{
 
 .campBtn p{
   color: #fff;
+}
+
+
+.infoIndCamp{
+  padding: 3rem 0;
+  width: 100%;
+
+  display: block;
+}
+
+.mapCamp{
+  float: left;
+}
+
+.infoMainCamp{
+  float: right;
+}
+
+.mapCamp,
+.infoMainCamp{
+  padding: 4em 4em;
+  border: 3px solid lightgray;
 }
