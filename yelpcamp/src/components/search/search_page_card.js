@@ -10,7 +10,7 @@ export class SearchPageCard extends Component {
             </div>
             <p style={{color: 'black', fontWeight: '700'}}>{this.props.infoCard.p}</p>
             <p>{this.props.infoCard.text}</p>
-            <button className='whiteBtn' style={{width: '100%'}}><Link to='/individualCamp' onClick={() => this.props.setCamp(this.props.infoCard.p)}><p style={{color: 'black', fontWeight: '700'}}>View Campground</p></Link></button>
+            <button className='whiteBtn' style={{width: '100%'}}><Link to='/individualCamp' onClick={() => this.props.setCamp(this.props.infoCard.p)}><p style={{ fontWeight: '700'}}>View Campground</p></Link></button>
         </div>
       )
     }
