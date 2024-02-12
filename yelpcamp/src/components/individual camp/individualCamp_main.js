@@ -9,7 +9,6 @@ export class IndividualCamp_main extends Component {
     return (
       <div className='mainIndCamp'>
         <SearchPageHeader/>
-        {console.log(this.props.objInd)}
         <IndividualCamp_info objIndCamp={this.props.objInd}/>
         <SearchFooter/>
       </div>

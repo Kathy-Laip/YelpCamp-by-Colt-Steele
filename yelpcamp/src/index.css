@@ -499,10 +499,9 @@ main{
   width: 60%;
 }
 
-.mapCamp,
-.infoMainCamp{
-  padding: 4em 4em;
+.mapCamp{
   border: 3px solid lightgray;
+  padding: 4em 4em;
 }
 
 .cardIndNamePrice{
@@ -512,8 +511,40 @@ main{
   margin: 1rem 0;
 }
 
-.cardIndNamePrice p{
+.descCamp,
+.chatIndCamp{
+  border: 3px solid lightgray;
+
+  padding: 4em 4em;
+}
+
+.cardIndNamePrice p,
+.commBlock p{
   display: block;
 }
 
+.chatIndCamp{
+  margin: 2rem 0;
+}
+
+.blockComm{
+  margin-bottom: 2rem;
+}
+
+.chatIndCamp button p{
+  margin: auto 0.5rem;
+  
+}
+
+.chatIndCamp button{
+  display: flex;
+
+  width: 40%;
+  height: 5rem;
+}
+
+.chatIndCamp button img{
+  max-height: 60%;
+  margin: auto -1rem;
+}
 

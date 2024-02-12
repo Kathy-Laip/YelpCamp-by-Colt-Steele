@@ -17,6 +17,26 @@ import buloyCamp from '../src/Assets/Camp Images/Compressed Images/Buloy Springs
 export class App extends Component {
   constructor(props){
     super(props)
+    this.history = [
+      {
+        name: 'Adam Jones',
+        text: 'Honestly one of the best experiences ever, took us a while to figure out' +
+        'how to get there but it was amazing!',
+        time: new Date(2024, 1, 11, 13, 25)
+      },
+      {
+        name: 'Isaac Dylan',
+        text: 'Traveling changes ypu as a person, you gain more perspective, this is the'+
+        'perfect spot to do that',
+        time: new Date(2024, 1, 10, 17, 25)
+      },
+      {
+        name: 'Hudson Luca',
+        text: 'Definitely recommend going there, not too far and not a lot of people to ruin'+
+        'the experience.',
+        time: new Date(2024, 1, 8, 17, 25)
+      }
+    ]
     this.state = {
       items: [ //here we can import data from a database that save the information about our avalibale camps
         {
@@ -28,6 +48,7 @@ export class App extends Component {
           'as moderate. The trail is promarily used for hiking.',
           author: 'Andrew Mike',
           img: mountCamp,
+          his: this.history
         },
         {
           p: 'Calaguas Islands',
