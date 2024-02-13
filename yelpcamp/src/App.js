@@ -57,6 +57,7 @@ export class App extends Component {
           textForIndividual: 'Calaguas, also known as Calaguas Islands, is a group of islands located in the Philippine province of Camarines Norte. It includes the major islands of Tinaga Island and Guintinua Island, the minor Maculabo Island, as well as several other minor. The group of islands is around 200 km away from the capital city of Manila and can be accessed through the ports at Paracale and Daet, Camarines Norte.',
           author: 'Andrew Mike',
           img: calaguasCamp,
+          his: this.history
         },
         {
           p: 'Onay Beach',
@@ -65,6 +66,7 @@ export class App extends Component {
           textForIndividual: 'Onay Beach is a long, long stretch, with one side fringed with thick vegetation and the other soaked in turquoise water. As I stood at the mouth of the main access point in the middle of the cove, I could hardly see its north end, seemingly disappearing in the droplets that the waves spray into the air.',
           author: 'Andrew Mike',
           img: onayCamp,
+          his: this.history
         },
         {
           p: 'The Seven Sisters Waterfall',
@@ -73,6 +75,7 @@ export class App extends Component {
           textForIndividual: 'The Seven Sisters (Norwegian: De Syv Søstrene or Dei sju systrene, also known as Knivsflåfossen) is the 39th tallest waterfall in Norway. The 410-metre (1,350 ft) tall waterfall consists of seven separate streams, and the tallest of the seven has a free fall that measures 250 metres (820 ft).',
           author: 'Andrew Mike',
           img: sevenSisterCamp,
+          his: this.history
         },
         {
           p: 'Latik Riverside',
@@ -83,6 +86,7 @@ export class App extends Component {
           'as moderate. The trail is promarily used for hiking.',
           author: 'Andrew Mike',
           img: latikCamp,
+          his: this.history
         },
         {
           p: 'Buloy Springs',
@@ -93,11 +97,13 @@ export class App extends Component {
           'as moderate. The trail is promarily used for hiking.',
           author: 'Andrew Mike',
           img: buloyCamp,
+          his: this.history
         },
       ],
       individualCamp: {},
     }
     this.setIndCamp = this.setIndCamp.bind(this)
+    this.addNewCamp = this.addNewCamp.bind(this)
   }
   render() {
     return (
@@ -107,7 +113,7 @@ export class App extends Component {
             <Route index element={<Landing/>} path='/'></Route>
             <Route path='/searchCamp' element={<SearchPage items={this.state.items} setCamp={this.setIndCamp}/>}></Route>
             <Route path='/signin' element={<SignInPage/>}></Route>
-            <Route path='/addNewCamp' element={<AddNewCamp/>}></Route>
+            <Route path='/addNewCamp' element={<AddNewCamp addCamp={this.addNewCamp}/>}></Route>
             <Route path='/individualCamp' element={<IndividualCamp_main objInd={this.state.individualCamp}/>}></Route>
           </Routes>
         </BrowserRouter>
@@ -117,6 +123,21 @@ export class App extends Component {
 
   setIndCamp(nameCamp){
     this.setState({individualCamp: this.state.items.filter(el => el.p === nameCamp)})
+  }
+
+  addNewCamp(newCamp){
+    let nameR = /[А-ЯА-Я0-9\b_]+/
+    let costR = /[0-9.]+/
+    let linkR = /(https?:\/\/.*\.(?:png|jpg))/
+    if(!newCamp.name || !newCamp.cost || !newCamp.link || !newCamp.text) return 'emptyField'
+    if(!nameR.test(newCamp.name)) return 'errorName'
+    if(!costR.test(newCamp.cost)) return 'erroCost'
+    if(!linkR.test(newCamp.link)) return 'errorLink'
+    else{
+      this.setState({items: [...this.state.items, {p: newCamp.name, text: newCamp.text, price: newCamp.cost, textForIndividual: newCamp.text, author: 'Andrew Mike', img: newCamp.link, his: {}}]})
+    }
+    console.log(this.state.items)
+    return 'ok'
   }
 }
 

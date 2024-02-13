@@ -33,7 +33,7 @@ export class IndividualCamp_info extends Component {
                 <hr style={{height: '1px', backgroundColor: 'gray'}}/>
               </div>
             ))}
-            <button className='btn'><img src={chat} style={{display: 'inline', width: '40%'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></button>
+            <button className='btn'><img src={chat} style={{display: 'inline'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></button>
             </div>
           </div>
         </div>

@@ -249,7 +249,13 @@ main{
 .searchLine input{
   font-size: 1rem;
   height: 100%;
+  width: 85%;
+  
   border: none;
+}
+
+.searchLine input:focus{
+  outline: none;
 }
 
 .btnSearch{
@@ -452,11 +458,38 @@ main{
   margin-bottom: 5rem;
 }
 
+.cardOfCamp input:focus{
+  outline: none;
+}
+
 .cardOfCamp #textCard{
   overflow: scroll;
   white-space: pre;
 
-  height: 40%;
+  height: 30vh;
+  width: 100%;
+
+  align-items: flex-start;
+
+  border: none;
+
+  background-color: #f1f1f1;
+  color: gray;
+
+  font-size: 1.5rem;
+  font-family: 'Archivo', sans-serif;
+
+  white-space: pre-wrap;
+
+  overflow-y: scroll;
+
+  padding: 1.5rem 1.5rem;
+
+  resize: none;
+}
+
+.cardOfCamp textarea:focus{
+  outline: none;
 }
 
 .cardOfCamp ::placeholder{
