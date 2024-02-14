@@ -9,7 +9,7 @@ export class SearchPage extends Component {
   render() {
     return (
       <div className='searchPage'>
-        <SearchPageHeader/>
+        <SearchPageHeader user={this.props.user}/>
         <SearchSearch/>
         <SearchCards items={this.props.items} setCamp={this.props.setCamp}/>
         <SearchFooter/>

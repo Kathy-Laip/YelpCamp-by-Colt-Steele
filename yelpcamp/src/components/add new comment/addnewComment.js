@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import SearchFooter from '../search/search_page_footer'
 import SearchPageHeader from '../search/search_page_header'
-import IndividualCamp_info from './individualCamp_info'
+import AddNewCommentCard from './addNewComment_card'
 
-export class IndividualCamp_main extends Component {
-
+export class AddnewComment extends Component {
   render() {
     return (
-      <div className='mainIndCamp'>
+      <div className='mainAddNewComment'>
         <SearchPageHeader user={this.props.user}/>
-        <IndividualCamp_info objIndCamp={this.props.objInd}/>
+        <AddNewCommentCard/>
         <SearchFooter/>
       </div>
     )
   }
 }
 
-export default IndividualCamp_main
+export default AddnewComment

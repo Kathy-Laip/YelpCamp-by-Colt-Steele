@@ -4,6 +4,11 @@ import logo from "../../Assets/Logo.svg"
 
 export class SearchPageHeader extends Component {
   render() {
+    console.log(this.props.user[0])
+    let user
+    if(this.props.user[0]){
+      user = <p>{this.props.user[0].login}</p>
+    } else user = <p>Login</p>
     return (
       <div className='headerSearch'>
         <div className='first'>
@@ -16,10 +21,10 @@ export class SearchPageHeader extends Component {
         </div>
         <div>
           <div className='btn' style={{width: '20vw', height: '100%'}} id='createAcc'>
-            <Link to=''><p style={{ color: 'white', fontSize: '1.5rem'}}>Create an account</p></Link>
+            <Link to='/signup'><p style={{ color: 'white', fontSize: '1.5rem'}}>Create an account</p></Link>
           </div>
           <div className='logIn'>
-            <Link to='/signin'><p>Login</p></Link>
+            <Link to='/signin'>{user}</Link>
           </div>
         </div>
       </div>

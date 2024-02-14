@@ -14,7 +14,7 @@ export class SearchSearch extends Component {
                 <img src={search}/>
                 <input placeholder='Search for camps'></input>
             </div>
-            <div className='btn btnSearch'><p>Search</p></div>
+            <div className='btn btnSearch'><Link to='/'><p>Search</p></Link></div>
             <div id='linkP'><Link to='/addNewCamp'>Or add your own campground</Link></div>
         </div>
       </div>

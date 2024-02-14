@@ -7,7 +7,7 @@ export class AddNewCamp extends Component {
   render() {
     return (
       <div className='addNewCampPage'>
-        <SearchPageHeader/>
+        <SearchPageHeader user={this.props.user}/>
         <CardOfCamp addCamp={this.props.addCamp}/>
         <SearchFooter/>
       </div>

@@ -445,7 +445,8 @@ main{
   }
 }
 
-.addNewCampPage{
+.addNewCampPage,
+.mainAddNewComment{
   padding: 0 5rem;
   width: 100vw;
 }
@@ -462,7 +463,8 @@ main{
   outline: none;
 }
 
-.cardOfCamp #textCard{
+.cardOfCamp #textCard,
+.cardOfCamp #desc{
   overflow: scroll;
   white-space: pre;
 
@@ -486,6 +488,10 @@ main{
   padding: 1.5rem 1.5rem;
 
   resize: none;
+}
+
+.cardOfCamp #desc{
+  height: 40vh;
 }
 
 .cardOfCamp textarea:focus{
@@ -557,6 +563,8 @@ main{
 }
 
 .chatIndCamp{
+  overflow-y: scroll;
+  height: 60vh;
   margin: 2rem 0;
 }
 
@@ -565,19 +573,24 @@ main{
 }
 
 .chatIndCamp button p{
-  margin: auto 0.5rem;
-  
+  margin: auto 0;
+  width: 60%;
 }
 
 .chatIndCamp button{
-  display: flex;
-
+  
   width: 40%;
   height: 5rem;
 }
 
-.chatIndCamp button img{
-  max-height: 60%;
-  margin: auto -1rem;
+#addNewComment a{
+  display: flex;
 }
+
+.chatIndCamp button img{
+  display: block;
+  max-height: 60%;
+  margin: auto 1.5rem;
+}
+
 

@@ -13,6 +13,8 @@ import onayCamp from '../src/Assets/Camp Images/Compressed Images/Onay Beach.jpg
 import sevenSisterCamp from '../src/Assets/Camp Images/Compressed Images/Seven Sisters Waterfall.jpg'
 import latikCamp from '../src/Assets/Camp Images/Compressed Images/Latik Riverside.jpg'
 import buloyCamp from '../src/Assets/Camp Images/Compressed Images/Buloy Springs.jpg'
+import AddnewComment from './components/add new comment/addnewComment';
+import SignUpPage from './components/signup/signup_page';
 
 export class App extends Component {
   constructor(props){
@@ -100,21 +102,38 @@ export class App extends Component {
           his: this.history
         },
       ],
+      users: [
+        {login: 'youngest',
+        password: 'reg09'
+        },
+        {login: 'danBan',
+        password: 'qwp1'
+        },
+        {login: 'katMon',
+        password: 'her82'
+        },
+      ],
       individualCamp: {},
+      user: {},
+      sw: {si: 'si', su: 'su'}
     }
     this.setIndCamp = this.setIndCamp.bind(this)
     this.addNewCamp = this.addNewCamp.bind(this)
+    this.checkOrSaveAcc = this.checkOrSaveAcc.bind(this)
   }
   render() {
+
     return (
       <>
         <BrowserRouter>
           <Routes>
             <Route index element={<Landing/>} path='/'></Route>
-            <Route path='/searchCamp' element={<SearchPage items={this.state.items} setCamp={this.setIndCamp}/>}></Route>
-            <Route path='/signin' element={<SignInPage/>}></Route>
-            <Route path='/addNewCamp' element={<AddNewCamp addCamp={this.addNewCamp}/>}></Route>
-            <Route path='/individualCamp' element={<IndividualCamp_main objInd={this.state.individualCamp}/>}></Route>
+            <Route path='/searchCamp' element={<SearchPage items={this.state.items} setCamp={this.setIndCamp} user={this.state.user}/>}></Route>
+            <Route path='/signin' element={<SignInPage sign={this.state.sw.si} check={this.checkOrSaveAcc}/>}></Route>
+            <Route path='/addNewCamp' element={<AddNewCamp addCamp={this.addNewCamp} user={this.state.user}/>}></Route>
+            <Route path='/individualCamp' element={<IndividualCamp_main objInd={this.state.individualCamp} user={this.state.user} />}></Route>
+            <Route path='/newComment' element={<AddnewComment user={this.state.user}/>}></Route>
+            <Route path='/signup' element={<SignUpPage sign={this.state.sw.su} check={this.checkOrSaveAcc}/>}></Route>
           </Routes>
         </BrowserRouter>
       </>
@@ -122,6 +141,7 @@ export class App extends Component {
   }
 
   setIndCamp(nameCamp){
+    console.log(this.state.items)
     this.setState({individualCamp: this.state.items.filter(el => el.p === nameCamp)})
   }
 
@@ -138,6 +158,22 @@ export class App extends Component {
     }
     console.log(this.state.items)
     return 'ok'
+  }
+
+
+  checkOrSaveAcc(sign, data){
+    console.log(sign, data)
+    if(sign === 'si'){
+      let user = this.state.users.filter(el => el.login === data.login && el.password === data.password)
+      if(!user) return 'hasntUser'
+      else {
+        this.setState({user: this.state.users.filter(el => el.login === data.login && el.password === data.password)})
+        return 'Вы вошли!'
+      }
+    } else if(sign === 'su'){
+      this.setState({users: [...this.state.users, data]})
+      return 'Вы зарегестрировались)'
+    }
   }
 }
 

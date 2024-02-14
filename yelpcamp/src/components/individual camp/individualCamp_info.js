@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import map from '../../Assets/Map.png'
 import chat from '../../Assets/Chat\ Bubble.svg'
 import IndividualCamp_infoCard from './individualCamp_infoCard'
+import { Link } from 'react-router-dom'
 
 
 export class IndividualCamp_info extends Component {
@@ -11,18 +12,10 @@ export class IndividualCamp_info extends Component {
       this.getTime = this.getTime.bind(this)
     }
     render() {
-      return (
-        <div className='infoIndCamp'>
-          <div className='mapCamp'>
-            <img src={map}/>
-          </div>
-          <div className='infoMainCamp'>
-            <div className='descCamp'>
-                <IndividualCamp_infoCard infoCard={this.props.objIndCamp}/>
-            </div>
-            <div className='chatIndCamp'>
-            {this.props.objIndCamp[0].his.map(el => (
-              <div className='blockComm'>
+      const hist = this.props.objIndCamp[0].his
+      let componentHist
+      if(hist.length > 0){
+        componentHist = this.props.objIndCamp[0].his.map(el => (<div className='blockComm'>
                 <div className='commBlock'>
                   <p style={{color: 'black', fontWeight: '700', width: '50%', float: 'left'}}>{el.name}</p>
                   <p style={{width: '50%', float:'right', textAlign:'right'}}>{
@@ -31,9 +24,24 @@ export class IndividualCamp_info extends Component {
                 </div>
                 <p>{el.text}</p>
                 <hr style={{height: '1px', backgroundColor: 'gray'}}/>
-              </div>
-            ))}
-            <button className='btn'><img src={chat} style={{display: 'inline'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></button>
+              </div>))
+      } else{
+        componentHist = <p style={{ color: 'black', fontWeight: '700', width: '100%', float: 'left'}}>Add your comment first!</p>
+      }
+      
+      return (
+        <div className='infoIndCamp'>
+        {console.log(this.props.objIndCamp)}
+          <div className='mapCamp'>
+            <img src={map}/>
+          </div>
+          <div className='infoMainCamp'>
+            <div className='descCamp'>
+                <IndividualCamp_infoCard infoCard={this.props.objIndCamp}/>
+            </div>
+            <div className='chatIndCamp'>
+              {componentHist}
+              <button className='btn' id='addNewComment'><Link  className='btnLink' to='/newComment'><img src={chat} style={{display: 'inline'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></Link></button>
             </div>
           </div>
         </div>

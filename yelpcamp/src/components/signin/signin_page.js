@@ -9,8 +9,7 @@ export class SignInPage extends Component {
       <div className='signinbody'>
         <SiginHader/>
         <SinginWords idSiginIn='pkSignIn'/>
-        <SignInLogin/>
-        <SinginWords idSignIn='mobileSinIn'/>
+        <SignInLogin sign={this.props.sign} check={this.props.check}/>
       </div>
     )
   }
