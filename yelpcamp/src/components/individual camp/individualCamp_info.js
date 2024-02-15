@@ -31,7 +31,6 @@ export class IndividualCamp_info extends Component {
       
       return (
         <div className='infoIndCamp'>
-        {console.log(this.props.objIndCamp)}
           <div className='mapCamp'>
             <img src={map}/>
           </div>
@@ -41,7 +40,7 @@ export class IndividualCamp_info extends Component {
             </div>
             <div className='chatIndCamp'>
               {componentHist}
-              <button className='btn' id='addNewComment'><Link  className='btnLink' to='/newComment'><img src={chat} style={{display: 'inline'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></Link></button>
+              <button className='btn' id='addc'><Link  className='btnLink' to='/newComment'><img src={chat} style={{display: 'inline'}}></img><p style={{ color: 'white', fontSize: '1.5rem'}}>Leave a Review</p></Link></button>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export class AddnewComment extends Component {
     return (
       <div className='mainAddNewComment'>
         <SearchPageHeader user={this.props.user}/>
-        <AddNewCommentCard/>
+        <AddNewCommentCard addComment={this.props.addComment}/>
         <SearchFooter/>
       </div>
     )

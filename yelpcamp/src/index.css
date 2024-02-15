@@ -165,6 +165,7 @@ main{
   padding: 3rem 0;
 }
 
+
 .first{
   display: flex;
 }
@@ -194,6 +195,46 @@ main{
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
+}
+
+.menuDesk{
+  display: block;
+}
+
+.menuMob{
+  display: none;
+  float: right;
+}
+
+.menuMob img{
+  float: right;
+}
+
+#hamMenu{
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  margin-top: 1rem;
+  
+  width: 200%;
+  float: right;
+
+  background-color: #f5f3f2;
+}
+
+#linksMenu{
+  display: block;
+  margin: 1rem 1rem;
+}
+
+#linksMenu p{
+  text-align: right;
+
+  width: 100%;
+
+  color: black;
+  font-size: 1rem;
 }
 
 #createAcc{
@@ -335,7 +376,16 @@ main{
   .card{
     width: 100%;
   }
+
+  .menuDesk{
+    display: none;
+  }
+
+  .menuMob{
+    display: block;
+  }
 }
+
 
 .headerSigin{
   float: left;
@@ -515,17 +565,26 @@ main{
 }
 
 
+@media (max-width: 1000px){
+  .cardOfCamp{
+    width: 100%;
+  }
+}
+
+
 .infoIndCamp{
   padding: 3rem 0;
   width: 100%;
 
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
   justify-content: space-between;
 }
 
 .mapCamp{
-  width: 35%;
+  width: 30%;
   height: 60%;
 }
 
@@ -535,7 +594,7 @@ main{
 }
 
 .infoMainCamp{
-  width: 60%;
+  width: 40%;
 }
 
 .mapCamp{
@@ -583,7 +642,7 @@ main{
   height: 5rem;
 }
 
-#addNewComment a{
+#addc a{
   display: flex;
 }
 

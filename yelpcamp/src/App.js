@@ -120,6 +120,7 @@ export class App extends Component {
     this.setIndCamp = this.setIndCamp.bind(this)
     this.addNewCamp = this.addNewCamp.bind(this)
     this.checkOrSaveAcc = this.checkOrSaveAcc.bind(this)
+    this.addComment = this.addComment.bind(this)
   }
   render() {
 
@@ -132,7 +133,7 @@ export class App extends Component {
             <Route path='/signin' element={<SignInPage sign={this.state.sw.si} check={this.checkOrSaveAcc}/>}></Route>
             <Route path='/addNewCamp' element={<AddNewCamp addCamp={this.addNewCamp} user={this.state.user}/>}></Route>
             <Route path='/individualCamp' element={<IndividualCamp_main objInd={this.state.individualCamp} user={this.state.user} />}></Route>
-            <Route path='/newComment' element={<AddnewComment user={this.state.user}/>}></Route>
+            <Route path='/newComment' element={<AddnewComment user={this.state.user} addComment={this.addComment}/>}></Route>
             <Route path='/signup' element={<SignUpPage sign={this.state.sw.su} check={this.checkOrSaveAcc}/>}></Route>
           </Routes>
         </BrowserRouter>
@@ -173,6 +174,17 @@ export class App extends Component {
     } else if(sign === 'su'){
       this.setState({users: [...this.state.users, data]})
       return 'Вы зарегестрировались)'
+    }
+  }
+
+  addComment(info){
+    if(!this.state.user) return 'noAcc'
+    if(info.text === '') return 'emptyComm'
+    else{
+      let item = this.state.items.filter(el => el.p === this.state.individualCamp[0].p)
+      item[0].his = [{name: this.state.user[0].login, text: info.text, time: info.time}, ...item[0].his]
+      // this.setState({items: [...items.map(el => if(el.p === this.individualCamp.p) el.his)]})
+      this.setState({items: [...this.state.items, item[0]]})
     }
   }
 }
