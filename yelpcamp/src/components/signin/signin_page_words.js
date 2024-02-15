@@ -7,7 +7,7 @@ export class SinginWords extends Component {
   }
   render() {
     return (
-      <div className='signInWords' id={this.props.idSignIn}>
+      <div className='signInWords'>
         <div className='centerWords'>
             <h2 style={{color: 'black', fontWeight: '700'}}>"YelpCamp has noestly saved me hours of research time, and the cmos on here are definitely well picked and added."</h2>
             <div className='user'>

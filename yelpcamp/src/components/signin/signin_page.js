@@ -8,7 +8,7 @@ export class SignInPage extends Component {
     return (
       <div className='signinbody'>
         <SiginHader/>
-        <SinginWords idSiginIn='pkSignIn'/>
+        <SinginWords/>
         <SignInLogin sign={this.props.sign} check={this.props.check}/>
       </div>
     )

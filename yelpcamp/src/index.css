@@ -237,6 +237,14 @@ main{
   font-size: 1rem;
 }
 
+#linksMenu p:hover{
+  color: blue
+}
+
+#linksMenu p:active{
+  color: green
+}
+
 #createAcc{
   float: right;
   text-align: center;
@@ -438,23 +446,18 @@ main{
 }
 
 .signInWords{
+  display: flex;
   float: right;
   background-color: #FAEEDD;
-  height: 100vh;
+  
   width: 35vw;
 }
 
-#mobileSinIn{
-  display: none;
-}
 
 .centerWords{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40%;
-
-  width: 60%;
-  height: 30%;
+  /* padding: 20rem 3rem; */
+  margin: auto 7rem;
+  box-sizing: border-box;
   
 }
 
@@ -482,16 +485,16 @@ main{
 
 
 @media(max-width: 1600px){
-  #pkSignIn{
-    display: none;
-  }
-  #mobileSinIn{
-    display: block;
-  }
   .headerSigin,
   .signInLogin,
   .signInWords{
     width:100%;
+  }
+}
+
+@media (min-width: 1600px){
+  .signInWords{
+    height: 100vh;
   }
 }
 
@@ -578,13 +581,11 @@ main{
 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-
   justify-content: space-between;
 }
 
 .mapCamp{
-  width: 30%;
+  width: 35%;
   height: 60%;
 }
 
@@ -594,7 +595,7 @@ main{
 }
 
 .infoMainCamp{
-  width: 40%;
+  width: 60%;
 }
 
 .mapCamp{
@@ -650,6 +651,16 @@ main{
   display: block;
   max-height: 60%;
   margin: auto 1.5rem;
+}
+
+@media (max-width: 1300px){
+  .mapCamp{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .infoMainCamp{
+    width: 100%;
+  }
 }
 
 
